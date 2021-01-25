@@ -1,0 +1,13 @@
+# Editor
+.code
+.atom
+.idea
+
+# Project
+node_modules
+*.log
+*.js
+
+# System
+*.ini
+.DS_Store

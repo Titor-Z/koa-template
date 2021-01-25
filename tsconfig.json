@@ -1,0 +1,10 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "CommonJS",
+    "types": [
+      "koa",
+      "koa-compose"
+    ]
+  }
+}
