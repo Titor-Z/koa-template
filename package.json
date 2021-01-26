@@ -4,7 +4,10 @@
   "description": "Koa练习",
   "main": "app.js",
   "scripts": {
-    "start": "tsc && nodemon app.js"
+    "start": "node app.js",
+    "dev": "tsc && nodemon app.js",
+    "clean": "rm -rf ./**/*.js",
+    "clear": "rm -rf node_modules ./**/*.js"
   },
   "devDependencies": {
     "@types/koa": "^2.11.6",
