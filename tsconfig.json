@@ -6,5 +6,10 @@
       "koa",
       "koa-compose"
     ]
-  }
+  },
+  "files": [
+    "app.ts",
+    "route/route.ts",
+    "controller/index.ts"
+  ]
 }
