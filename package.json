@@ -8,8 +8,8 @@
     "start": "node app.js",
     "dev": "tsc && nodemon app.js",
     "build": "tsc",
-    "clean": "rm -rf ./**/*.js",
-    "clear": "rm -rf node_modules ./**/*.js"
+    "clean": "rm -rf ./**/*.js ./*.js",
+    "clear": "rm -rf node_modules ./**/*.js ./*.js"
   },
   "devDependencies": {
     "@types/koa": "^2.11.6",
