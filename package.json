@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "tsc && nodemon app.js",
+    "build": "tsc",
     "clean": "rm -rf ./**/*.js",
     "clear": "rm -rf node_modules ./**/*.js"
   },
