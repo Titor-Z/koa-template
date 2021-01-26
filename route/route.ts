@@ -1,22 +1,15 @@
 import * as Router from "koa-router"
-import { Context, Next } from "koa"
-
+import { Index as IndexRoute } from "./../controller/index"
 const router: Router = new Router()
 
-router.get('/', async (ctx: Context, next: Next) => {
-  ctx.body = "This is Home!"
-  await next()
-})
 
-router.get('/json', async (ctx: Context, next: Next) => {
-  ctx.type = 'json'
-  ctx.body = {
-    code: "200",
-    message: "This is Home!"
-  }
-  await next()
-})
 
+router.get('/', IndexRoute.index)
+router.get('/json', IndexRoute.json)
+
+
+
+// --------------------------------------------------
 // 导出 router 规则
+// --------------------------------------------------
 export default router
-
