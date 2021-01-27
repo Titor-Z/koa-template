@@ -7,7 +7,9 @@
 node_modules
 *.log
 *.js
+.config
 
 # System
 *.ini
 .DS_Store
+.ash_history
