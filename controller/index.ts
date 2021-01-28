@@ -8,10 +8,10 @@ export class Index {
   }
 
   static async json(ctx: Context, next: Next): Promise<any> {
-    ctx.type = 'json'
+    ctx.type = "json"
     ctx.body = {
       code: "200",
-      message: "This is Home!"
+      message: "This is Home!",
     }
     await next()
   }
