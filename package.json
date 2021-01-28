@@ -6,10 +6,11 @@
   "license": "MIT",
   "scripts": {
     "start": "node app.js",
-    "dev": "tsc && nodemon app.js",
-    "build": "tsc",
+    "dev": "yarn tsc && yarn nodemon app.js",
+    "build": "yarn tsc",
     "clean": "rm -rf ./**/*.js ./*.js",
-    "clear": "rm -rf node_modules ./**/*.js ./*.js"
+    "clear": "rm -rf node_modules ./**/*.js ./*.js",
+    "docker": "yarn && yarn tsc && yarn nodemon app.js"
   },
   "devDependencies": {
     "@types/koa": "^2.11.6",
