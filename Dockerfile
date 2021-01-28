@@ -1,18 +1,20 @@
 FROM  foolsecret/alpine
 
-# 安装 NodeJS 和 Yarn
-RUN   apk update && apk upgrade && \
-      apk add nodejs-current yarn
 
-WORKDIR /root/
+# 安装 NodeJS 和 Yarn
+RUN   apk update upgrade && \
+      apk add --no-cache nodejs-current yarn
+
+
 # 安装依赖项
-RUN   yarn
+#WORKDIR   /root/
+#COPY  . .
+#RUN   cd /root/ && yarn install && yarn tsc
+
 
 # 默认目录 Root 用户目录
-VOLUME  /root/
-
 # 默认端口 4321
+# 启动 开发模式
+VOLUME  /root/
 EXPOSE  4321
-
-# 默认启动 app应用
-ENTRYPOINT ["yarn", "dev"]
+ENTRYPOINT   ["yarn", "docker"]

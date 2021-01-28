@@ -1,7 +1,7 @@
-version: '3'
+version : '3'
 
-services: 
-  koa:
+services :
+  koa :
     build : .
     container_name : "koa-template"
     restart : "no"
@@ -9,3 +9,4 @@ services:
       - 4321:4321
     volumes :
       - .:/root
+    working_dir : /root/
