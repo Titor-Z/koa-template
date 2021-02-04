@@ -1,12 +1,12 @@
-version : '3'
+version: '3'
 
-services :
-  koa :
-    build : .
-    container_name : "koa-template"
-    restart : "no"
-    ports :
+services:
+  koa:
+    build: .
+    container_name: "koa-template"
+    restart: "no"
+    ports:
       - 4321:4321
-    volumes :
+    volumes:
       - .:/root
-    working_dir : /root/
+    working_dir: /root/

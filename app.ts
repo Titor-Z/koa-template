@@ -1,8 +1,8 @@
 import Application from "koa"
 import router from "./route/route"
 
-const app: Application = new Application();
-const port: Number = 4321;
+const app: Application = new Application()
+const port: Number = 4321
 
 
 // --------------------------------------------------
