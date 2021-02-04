@@ -1,4 +1,4 @@
-import * as Router from "koa-router"
+import Router from "koa-router"
 import { Index as IndexRoute } from "./../controller/index"
 const router: Router = new Router()
 

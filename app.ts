@@ -1,4 +1,4 @@
-import * as Application from "koa"
+import Application from "koa"
 import router from "./route/route"
 
 const app: Application = new Application();
