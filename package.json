@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "koa": "^2.13.1",
+    "koa-nunjucks-2": "^3.0.2",
     "koa-router": "^10.0.0"
   },
   "prettier": {
@@ -35,6 +36,10 @@
     "trailingComma": "es5"
   },
   "nodemonConfig": {
-    "watch": ["*.js"]
+    "watch": [
+      "*.js",
+      "*.ts",
+      "*.njk"
+    ]
   }
 }

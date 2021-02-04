@@ -15,4 +15,10 @@ export class Index {
     }
     await next()
   }
+
+  static async view(ctx: Context) {
+    await ctx.render("index", {
+      name: "titor",
+    })
+  }
 }
