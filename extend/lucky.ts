@@ -13,7 +13,7 @@ export class lucky {
    * @return {void}
    */
   static warning(content: any) {
-    cmd("yellow", content);
+    return cmd("yellow", content);
   }
 
   /**
@@ -22,7 +22,7 @@ export class lucky {
    * @return {void}
    */
   static danger(content: any) {
-    cmd("magenta", content);
+    return cmd("magenta", content);
   }
 
   /**
@@ -31,7 +31,7 @@ export class lucky {
    * @return {void}
    */
   static info(content: any) {
-    cmd("cyan", content);
+    return cmd("cyan", content);
   }
 
   /**
@@ -40,7 +40,7 @@ export class lucky {
    * @return {void}
    */
   static second(content: any) {
-    cmd("grey", content);
+    return cmd("grey", content);
   }
 
   /**
@@ -49,7 +49,7 @@ export class lucky {
    * @return {void}
    */
   static light(content: any) {
-    cmd("white", content);
+    return cmd("white", content);
   }
 
   /**
@@ -58,7 +58,7 @@ export class lucky {
    * @return {void}
    */
   static primary(content: any) {
-    cmd("blue", content);
+    return cmd("blue", content);
   }
 
   /**
@@ -67,7 +67,7 @@ export class lucky {
    * @return {void}
    */
   static success(content: any) {
-    cmd("green", content);
+    return cmd("green", content);
   }
 
   /**
@@ -76,6 +76,6 @@ export class lucky {
    * @return {void}
    */
   static dark(content: any) {
-    cmd("black", content);
+    return cmd("black", content);
   }
 }
