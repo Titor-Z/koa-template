@@ -16,7 +16,7 @@ async function logger(app: Context, next: Next): Promise<void> {
 
   // @ts-ignore
   let ms: Date = new Date() - start;
-  console.log(`${setMethodImage(app)} ${lucky.info(app.method)} ${lucky.second(app.url)} - ${lucky.primary(ms + "ms")}`);
+  console.log(`${setMethodImage(app)} ${lucky.info(app.method)} ${lucky.second(app.url)} ${lucky.primary('['+ ms + "ms]")}`);
 }
 
 /**
