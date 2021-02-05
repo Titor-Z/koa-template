@@ -1,39 +1,29 @@
-import Application from "koa"
-import { router } from "./route/route"
+import Application from "koa";
+import { router } from "./route/route";
 // @ts-ignore
-import view from "koa-nunjucks-2"
+import view from "koa-nunjucks-2";
+import { logger } from "./extend/logger";
 
-const cmd = require("colors-console")
+const app: Application = new Application();
+const port: Number = 4321;
 
-const app: Application = new Application()
-const port: Number = 4321
-
-// ------------------------------------------------------------
-// --------------------------------------------------
-// Use View
+// -------------------------------------------------- Use View
 app.use(
   view({
     ext: "njk",
     path: process.cwd() + "/view/",
   })
-)
+);
 
-// Use logger
-app.use(async (ctx: Application.Context, next: Application.Next) => {
-  let start: Date = new Date()
-  await next()
-  // @ts-ignore
-  let ms: Date = new Date() - start
-  console.log(
-    `${cmd("cyan", ctx.method)} ${cmd("magentaBG", ctx.url)} - ` +
-      cmd("blue", ms + "ms")
-  )
-})
+// -------------------------------------------------- Use logger
+app.use((ctx: Application.Context, next) => {
+  logger(ctx, next).then();
+});
 
-// Use Route
-app.use(router.routes())
+// -------------------------------------------------- Use Route
+app.use(router.routes());
 
 // ========================================================================
 // START Application
 // ========================================================================
-app.listen(port)
+app.listen(port);
